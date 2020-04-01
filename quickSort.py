@@ -1,4 +1,5 @@
 from typing import List
+import random
 
 def quickSort(ls : List[int]) -> List[int]:
 	base = ls[len(ls) // 2]
@@ -7,5 +8,7 @@ def quickSort(ls : List[int]) -> List[int]:
 	return l + [base] + r
 
 if __name__ == '__main__':
-	ls = [9, 5, 3, 8, 1, 10, 4, 11]
+	ls = []
+	for i in range(1000):
+		ls.append(random.randint(1,1000))
 	print(quickSort(ls))
